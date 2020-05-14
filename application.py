@@ -9,9 +9,9 @@ def hello():
 
 @app.route('/posts', methods=['GET'])
 def home():
-    #getPostsFromDb()
+    a = getPostsFromDb()
     #console.log(posts)
-    return "<h1>Queried Azure SQl Datbase in" + os.environ['testPathVariable'] + "kishor /get endpoint</h1><p>FIFI</p>"
+    return "<h1>Queried Azure SQl Datbase in" + a + os.environ['testPathVariable'] + "kishor /get endpoint</h1><p>FIFI</p>"
 
 
 def getPostsFromDb():
