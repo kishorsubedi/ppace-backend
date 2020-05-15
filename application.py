@@ -24,7 +24,8 @@ def getPostsFromDb():
     cursor = cnxn.cursor()
     cursor.execute("SELECT * FROM dbo.Customers")
     row = cursor.fetchone()
+    result = ""
     while row:
-        print (str(row[0]) + " " + str(row[1]))
+        result += (str(row[0]) + " " + str(row[1]))
         row = cursor.fetchone()
-    
+    return result
